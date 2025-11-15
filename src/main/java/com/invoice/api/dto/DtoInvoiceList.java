@@ -1,12 +1,13 @@
 package com.invoice.api.dto;
+import java.time.LocalDate;
 
 public class DtoInvoiceList {
 	
-	private String id;
+	private Integer invoice_id;
 	
 	private Integer user_id;
 		
-	private String created_at;
+	private LocalDate created_at;
 	
 	private Double subtotal;
 	
@@ -18,9 +19,9 @@ public class DtoInvoiceList {
 		
 	}
 
-	public DtoInvoiceList(String id, Integer user_id, String created_at, Double subtotal, Double taxes, Double total) {
+	public DtoInvoiceList(Integer invoice_id, Integer user_id, LocalDate created_at, Double subtotal, Double taxes, Double total) {
 		super();
-		this.id = id;
+		this.invoice_id = invoice_id;
 		this.user_id = user_id;
 		this.created_at = created_at;
 		this.subtotal = subtotal;
@@ -28,12 +29,12 @@ public class DtoInvoiceList {
 		this.total = total;
 	}
 
-	public String getId() {
-		return id;
+	public Integer getInvoice_id() {
+		return invoice_id;
 	}
 
-	public void setId(String id) {
-		this.id = id;
+	public void setInvoice_id(Integer invoice_id) {
+		this.invoice_id = invoice_id;
 	}
 
 	public Integer getUser_id() {
@@ -44,11 +45,11 @@ public class DtoInvoiceList {
 		this.user_id = user_id;
 	}
 
-	public String getCreated_at() {
+	public LocalDate getCreated_at() {
 		return created_at;
 	}
 
-	public void setCreated_at(String created_at) {
+	public void setCreated_at(LocalDate created_at) {
 		this.created_at = created_at;
 	}
 

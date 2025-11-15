@@ -13,14 +13,17 @@ public class DtoProductResponse {
     
     private String gtin;
     private String product;
-    private String description; // <-- AÑADIDO
+    private String description; 
     private Float price;
     private Integer stock;
     private Integer status;
     private String category;
     
-    // --- AÑADIDO PARA EL NUEVO ENDPOINT DE DETALLE ---
+    
     private List<Map<String, String>> images;
+
+    private Integer category_id;
+
 
     // Getters y Setters
     public Integer getProductId() {
@@ -76,5 +79,12 @@ public class DtoProductResponse {
     }
     public void setImages(List<Map<String, String>> images) {
         this.images = images;
+    }
+
+    public Integer getCategory_id() {
+        return category_id;
+    }
+    public void setCategory_id(Integer category_id) {
+        this.category_id = category_id;
     }
 }
